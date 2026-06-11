@@ -39,41 +39,14 @@ wget https://raw.githubusercontent.com/LeaoMartelo2/LogNest/main/lognest.h
 ```
 <sub> The separators (`[]`) around the type must also be included here. </sub>
 
-- Optionally change where the log file path with:
-
-```c 
-#define LOGNEST_FILE "path/to/log/filename.log"
-```
-
-<sub> Defaults to `latest.log` </sub>
-
-- Optionally disable the log's time or date of message with:
-
-```c 
-#define LOGNEST_DISABLE_TIMESTAMP
-/* or */
-#define LOGNEST_DISABLE_DATESTAMP
-```
-
-- Optionally allow crashing on error with:
-```c
-#define LOGNEST_ALLOW_CRASH
-```
-
-- Some other misc configurations can be changed with:
-```c 
-#define LOGNEST_ABORT()
-/* uses stdlib's abort() for crashing */
-#define LOGNEST_API
-/* added before every function definition, use it to add stuff like `static inline` on single file projects */
-```
-
 ![image](images/usage2.png)
 
 ## Latest update changes:
 
+### LogNest 3.0.0
 
-### LogNest 2.1.6
+- Rewrite the whole library from scratch
+- This is a regression in some functionality, but strictly to non-important / easily re-implementable
 
-- Fix issue with `LOGNEST_API` macro causing some issues with its defult behaviour, now its up to the user to enable it.
-- Add macro to replace force exiting / crashing on error function with your own.
+- Removed: `LOGNEST_FILE` macro, `LOGNEST_DISABLE` for timestamp and datestamp, and `ALLOW_CRASH`
+
