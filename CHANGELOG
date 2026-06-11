@@ -1,3 +1,10 @@
+### LogNest 3.0.0
+
+- Rewrite the whole library from scratch
+- This is a regression in some functionality, but strictly to non-important / easily re-implementable
+
+- Removed: `LOGNEST_FILE` macro, `LOGNEST_DISABLE` for timestamp and datestamp, and `ALLOW_CRASH`
+
 ### LogNest 2.1.6
 
 - Fix issue with `LOGNEST_API` macro causing some issues with its defult behaviour, now its up to the user to enable it.
